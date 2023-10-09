@@ -10,6 +10,22 @@
 
 using namespace std;
 
+// create_jagged_array
+// Allocates a jagged array on the heap with the specified rows and columns.
+// Post-condition: 2D array is allocated on the heap. Must be deleted later.
+int** create_jagged_array(int rows, int* columns) {
+	int** jagged_array;
+	// TODO create the "outer" array on the heap. Use `jagged_array` int
+	// double-pointer for this.
+	
+	for (int i = 0; i < rows; i++) {
+		// TODO create "inner" array at index i on the heap. Use
+		// `jagged_array[i]` pointer for this.
+	}
+
+	return jagged_array;
+}
+
 // prompt_column_counts
 // Prompt the user for the number of columns in each row. Store answers in
 // 		dynamic array of size M, where M is the number of rows. Return it.
@@ -22,6 +38,8 @@ int* prompt_column_counts(int rows) {
 	return nullptr; // Placeholder
 }
 
+// init_jagged_array
+// Initializes the values of the given jagged array to random floats in [0, 1]
 void init_jagged_array(int** jagged_array, int rows, int* columns) {
 	for (int i = 0; i < rows; i++) {
 		int columns_in_current_row = columns[i];
@@ -58,21 +76,14 @@ int main() {
 	
 	int rows;
 	// TODO (write and call a function) Ask user for # of rows. Store in `rows`.
-
-	int** jagged_array;
-	// TODO Create "outer" array (array of pointers on the heap, initially
-	// garbage). Store in `jagged_array`
-
+	
 	// Prompt user for number of columns in each row. Store answers in dynamic
 	// array.
 	int* columns = prompt_column_counts(rows);
 
-	// The "outer" part of the dynamic jagged array is already created.
-	// Now, we need to create the "inner" arrays---each element of the outer
-	// array should be a pointer that points to a respective inner array.
-	for (int i = 0; i < rows; i++) {
-		// TODO Create inner array at index i
-	}
+	// Create jagged array (array of pointers on the heap, initially
+	// garbage)
+	int** jagged_array = create_jagged_array(rows, columns);
 
 	// TODO (write and call a function) initialize jagged array values
 	init_jagged_array(jagged_array, rows, columns);
