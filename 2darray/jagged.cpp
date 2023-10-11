@@ -13,8 +13,8 @@ using namespace std;
 // create_jagged_array
 // Allocates a jagged array on the heap with the specified rows and columns.
 // Post-condition: 2D array is allocated on the heap. Must be deleted later.
-int** create_jagged_array(int rows, int* columns) {
-	int** jagged_array;
+double** create_jagged_array(int rows, int* columns) {
+	double** jagged_array;
 	// TODO create the "outer" array on the heap. Use `jagged_array` int
 	// double-pointer for this.
 	
@@ -40,7 +40,7 @@ int* prompt_column_counts(int rows) {
 
 // init_jagged_array
 // Initializes the values of the given jagged array to random floats in [0, 1]
-void init_jagged_array(int** jagged_array, int rows, int* columns) {
+void init_jagged_array(double** jagged_array, int rows, int* columns) {
 	for (int i = 0; i < rows; i++) {
 		int columns_in_current_row = columns[i];
 		for (int j = 0; j < columns_in_current_row; j++) {
@@ -51,7 +51,7 @@ void init_jagged_array(int** jagged_array, int rows, int* columns) {
 
 // print_jagged_array
 // Prints the jagged array neatly to the terminal (cout)
-void print_jagged_array(int** jagged_array, int rows, int* columns) {
+void print_jagged_array(double** jagged_array, int rows, int* columns) {
 	// Print the array
 	for (int i = 0; i < rows; i++) {
 		// TODO (write and call a function) print the current row (index i)
@@ -60,7 +60,7 @@ void print_jagged_array(int** jagged_array, int rows, int* columns) {
 
 // delete_jagged_array
 // Deletes the jagged array from the heap
-void delete_jagged_array(int** jagged_array, int rows, int* columns) {
+void delete_jagged_array(double** jagged_array, int rows, int* columns) {
 	// Delete the "inner" arrays first
 	for (int i = 0; i < rows; i++) {
 		// TODO Delete the current inner array (index i)
@@ -83,7 +83,7 @@ int main() {
 
 	// Create jagged array (array of pointers on the heap, initially
 	// garbage)
-	int** jagged_array = create_jagged_array(rows, columns);
+	double** jagged_array = create_jagged_array(rows, columns);
 
 	// TODO (write and call a function) initialize jagged array values
 	init_jagged_array(jagged_array, rows, columns);
