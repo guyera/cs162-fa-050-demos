@@ -8,7 +8,6 @@ using namespace std;
 struct baseball_player {
 	string first_name;
 	string last_name;
-	int age;
 	double batting_average;
 };
 
