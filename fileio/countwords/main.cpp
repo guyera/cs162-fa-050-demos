@@ -28,21 +28,17 @@ int main() {
 	// successfully---that will be the number of words in the file.
 	int count = 0;
 	do {
-		string s;
-		my_ifstream >> s;
-		// If you wanted to count the number of lines in the file, you could
-		// replace `my_ifstream >> s` with `getline(my_ifstream, s)`.
+		// TODO read a word
 
 		// Assume the file has a newline character at the end. Then eof()
 		// will be false until we read all of the words in the file, and THEN
 		// read one extra time after that. If it's currently still true, then
 		// that means we just successfully read another word---increment count.
-		if (!my_ifstream.eof()) {
-			count++;
-		}
+		// TODO
 
 		// If my_ifstream.eof() is false, on the other hand, then we've read
-		// all of the words AND read the newline character at the end.
+		// all of the words AND read the newline character at the end. In that
+		// case, nothing needs to be done (the loop will break momentarily)
 	} while (!my_ifstream.eof());
 
 	// Print the count
