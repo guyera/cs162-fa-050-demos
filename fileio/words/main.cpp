@@ -6,26 +6,45 @@
 
 #include <iostream>
 
-// TODO What do we have to #include?
+// What do we have to #include?
+#include <fstream>
+
+using namespace std;
+
+string get_filename() {
+	string filename;
+	cout << "Enter the filename: ";
+	cin >> filename;
+	return filename;
+}
 
 int main() {
-	string filename;
-	// TODO (write and call a function) ask the user for the name of the file
+	//  ask the user for the name of the file
 	// they want us to write to. Store the filename in `filename`
-	
+	string filename = get_filename();
+
 	// Create the ifstream
 	ifstream my_ifstream;
 
-	// TODO Tell the ifstream to open the file whose name is stored in `filename`
-	
-	// TODO Read the first word from the file. Yes, even though we don't need
-	// to print it to the terminal, we still have to read it in order to get
-	// "past" it and proceed to read the second word.
+	// Tell the ifstream to open the file whose name is stored in `filename`
+	my_ifstream.open(filename);
 
-	// TODO Read the second word from the file, then print it to the terminal
+	string peanuts;
+	// Read the first word from the file
+	my_ifstream >> peanuts;
 
-	// TODO Read the third word from the file. Again, even though we don't have
-	// to print it, we still have to read it to get to the decimal number.
+	// Read the second word from the file
+	my_ifstream >> peanuts;
 
-	// TODO Read the decimal number to the file, then print it to the terminal.
+	// Print the second word from the file
+	cout << peanuts << endl;
+
+	// Read the third word from the file
+	my_ifstream >> peanuts;
+
+	// Read the decimal number to the file, then print it to the terminal.
+	double decimal_value;
+	my_ifstream >> decimal_value;
+
+	cout << decimal_value << endl;
 }
