@@ -8,16 +8,20 @@ int main() {
 	// Create a person
 	person joe;
 
-	// TODO Call joe's mutator function to set their name to "Joe"
+	// Call joe's mutator function to set their name to "Joe"
+	joe.set_name("Joe");
 
-	// TODO We can't simply print joe.name, since the name variable is private.
+	// We can't simply print joe.name, since the name variable is private.
 	// However, we can get its string value by calling joe's accessor,
 	// then we can print the returned value:
+	cout << joe.get_name() << endl;
 
 	// Create another person, sally
 	person sally;
 
-	// TODO Call sally's mutator function to set their name to "Sally"
+	// Call sally's mutator function to set their name to "Sally"
+	sally.set_name("Sally");
 
-	// TODO Print sally's name
+	// Print sally's name
+	cout << sally.get_name() << endl;
 }

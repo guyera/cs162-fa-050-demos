@@ -31,7 +31,10 @@ int main() {
 	// Get N from the user
 	int n = get_n();
 
-	// TODO Read the first N - 1 lines to "skip" them
+	string line;
+	for (int i = 0; i < n; i++) {
+		getline(my_ifstream, line); // Reads the ith line of text from the file
+	}
 
-	// TODO Read the nth line and print it
+	cout << line << endl;
 }
