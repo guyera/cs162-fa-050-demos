@@ -10,7 +10,8 @@ private:
 	string first_name;
 	string last_name;
 public:
-	// TODO Default constructor
+	// Default constructor
+	person();
 
 	void set_first_name(const string&);
 	void set_last_name(const string&);

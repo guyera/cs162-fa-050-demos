@@ -5,9 +5,7 @@
 using namespace std;
 
 void person::set_name(string name) {
-	// TODO How do we implement this function, now that
-	// the parameter is called `name`, just like the
-	// member variable?
+	this->name = name;
 }
 
 string person::get_name() {
@@ -15,7 +13,5 @@ string person::get_name() {
 }
 
 void person::print_this() {
-	// TODO Print `this` to prove that it retrieves the
-	// memory address of the object that we're operating
-	// on
+	cout << this << endl; // Prints the address of our person
 }

@@ -4,7 +4,12 @@
 
 using namespace std;
 
-// TODO Define the nondefault constructor
+// Define the nondefault constructor
+
+person::person(string first_name, string last_name) {
+	this->first_name = first_name;
+	this->last_name = last_name;
+}
 
 void person::greet() const {
 	// Print "Hello! My name is <name>"

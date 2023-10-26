@@ -16,6 +16,8 @@ public:
 	// Retrieve (return) the value of the person's private name variable
 	// accessor
 	string get_name();
+
+	void greet();
 };
 
 #endif

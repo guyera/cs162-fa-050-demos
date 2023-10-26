@@ -13,3 +13,7 @@ void person::set_name(string the_name) {
 string person::get_name() {
 	return name;
 }
+
+void person::greet() {
+	cout << "Hello! My name is " << name << endl;
+}

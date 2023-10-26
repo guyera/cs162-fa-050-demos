@@ -10,8 +10,10 @@ private:
 	string first_name;
 	string last_name;
 public:
-	// TODO nondefault constructor that accepts
+	// nondefault constructor that accepts
 	// first_name and last_name parameters
+	person(string first_name, string last_name);
+	person();
 
 	void greet() const;
 };

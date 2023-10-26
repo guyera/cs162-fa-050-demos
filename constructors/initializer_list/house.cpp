@@ -12,7 +12,8 @@ using namespace std;
 // 8 ft tall. We need to tell the default house constructor
 // to construct the east and west walls via the nondefault
 // wall constructor, passing in 12 and 8 as the arguments.
-// We do that in the following member initializer list: TODO
+// We do that in the following member initializer list
+house::house() : east_wall(12, 8), west_wall(12, 8) {}
 
 // Here's the print function:
 void house::print() const {
