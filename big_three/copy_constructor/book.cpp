@@ -40,4 +40,13 @@ book::~book() {
 	}
 }
 
-// Copy constructor TODO
+// Copy constructor
+book::book(const book& existing_book)
+		: n_pages(existing_book.n_pages),
+		pages(new page[existing_book.n_pages]) {
+	for (int i = 0; i < n_pages; i++) {
+		// one at a time, copy the existing_book's ith
+		// page into this book's ith page
+		pages[i] = existing_book.pages[i];
+	}
+}

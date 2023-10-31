@@ -9,7 +9,8 @@ private:
 	page* pages;
 public:
 	book(int n_pages);
-	// TODO copy constructor
+	// copy constructor
+	book(const book& existing_book);
 
 	void write_page(int page_index, const string &content);
 

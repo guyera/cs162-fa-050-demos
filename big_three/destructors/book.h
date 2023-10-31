@@ -17,7 +17,8 @@ public:
 	// A book has dynamic memory (pages). Therefore, a book
 	// needs a destructor to delete that dynamic memory. A
 	// destructor must be called ~NAME, where NAME is the name
-	// of the class. They must have no parameters. In this case: TODO
+	// of the class. They must have no parameters. In this case:
+	~book();
 };
 
 #endif

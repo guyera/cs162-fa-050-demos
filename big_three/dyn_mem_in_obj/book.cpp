@@ -4,9 +4,15 @@
 
 using namespace std;
 
-// Nondefault constructor. TODO
+// Nondefault constructor.
+book::book(int n_pages)
+	: n_pages(n_pages),
+	pages(new page[n_pages]) {}
 
-// write_page / mutator TODO
+// write_page / mutator
+void book::write_page(int index, const string& content) {
+	pages[index].set_content(content);
+}
 
 // Print function
 void book::print() const {

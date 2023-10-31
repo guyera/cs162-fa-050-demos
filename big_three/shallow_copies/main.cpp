@@ -17,6 +17,9 @@ int main() {
 
 	// Let's copy the book
 	book second_book = first_book;
+	// second_book.n_pages = first_book.n_pages;
+	// second_book.pages = first_book.pages;
+
 	
 	// Now, let's modify the second page of first_book
 	first_book.write_page(1, "I dedicate this book to my mother");

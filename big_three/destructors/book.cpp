@@ -20,4 +20,10 @@ void book::print() const {
 	}
 }
 
-// Destructor definition TODO
+// Destructor definition
+book::~book() {
+	if (pages != nullptr) {
+		delete [] pages;
+		pages = nullptr;
+	}
+}

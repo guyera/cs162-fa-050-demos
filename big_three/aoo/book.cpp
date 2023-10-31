@@ -49,4 +49,21 @@ book::book(const book& existing_book)
 	}
 }
 
-// Assignment operator overload TODO
+// Assignment operator overload
+book& book::operator=(const book& other_book) {
+	if (this == &other_book) {
+		return *this;
+	}
+
+	if (pages != nullptr) {
+		delete [] pages;
+	}
+
+	n_pages = other_book.n_pages;
+	pages = new page[n_pages];
+	for (int i = 0; i < n_pages; i++) {
+		pages[i] = other_book.pages[i];
+	}
+
+	return *this;
+}

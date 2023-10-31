@@ -15,12 +15,16 @@ int main() {
 	// If we printed first_book's contents, it would print as expected:
 	// first_book.print(); // (commented out for brevity)
 
-	// Declare second_book as a copy of first_book
+	// Declare second_book as a copy of first_book. This will call
+	// the copy constructor on the second book, passing the first
+	// book as the const reference parameter.
 	book second_book = first_book;
 
 	// Modify first_book
 	first_book.write_page(1, "I dedicate this book to my mother");
 
-	// Print second book's contents---notice that it's unmodified
+	// Print second book's contents---notice that it's unmodified!
+	// second_book has its OWN dynamic array of pages, as per the copy
+	// constructor's member initializer list.
 	second_book.print();
 }

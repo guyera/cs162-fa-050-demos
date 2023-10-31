@@ -10,7 +10,7 @@ private:
 public:
 	book(int n_pages);
 	book(const book& existing_book);
-	// TODO assignment operator overload
+	book& operator=(const book& other_book);
 
 	void write_page(int page_index, const string &content);
 
