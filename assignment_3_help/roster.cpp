@@ -5,6 +5,37 @@
 
 using namespace std;
 
+roster::roster() {}
+
+roster::roster(const roster &other)
+		: students(new student[n_students]),
+		n_students(other.n_students) {
+	for (int i = 0; i < n_students; i++) {
+		students[i] = other.students[i];
+	}
+}
+
+roster& roster::operator=(const roster &other) {
+	if (this == &other) {
+		return *this;
+	}
+
+	if (students != nullptr) {
+		delete [] students;
+		students = nullptr;
+	}
+
+	n_students = other.n_students;
+
+	students = new student[other.n_students];
+
+	for (int i = 0; i < n_students; i++) {
+		students[i] = other.students[i];
+	}
+
+	return *this;
+}
+
 void roster::load_data(ifstream &roster_file) {
 	roster_file >> n_students;
 	students = new student[n_students];
