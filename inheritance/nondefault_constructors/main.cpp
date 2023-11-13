@@ -9,7 +9,4 @@ int main() {
 
 	// TODO Print the dog's dog-specific information by calling
 	// its dog::print_fixed() function
-	// And let's print d's dog-specific information by calling its
-	// dog::print_fixed() function
-	d.print_fixed();
 }
