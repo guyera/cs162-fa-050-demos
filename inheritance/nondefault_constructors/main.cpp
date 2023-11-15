@@ -2,11 +2,14 @@
 #include "dog.h"
 
 int main() {
-	// TODO Create a dog with our nondefault constructor
+	// Create a dog with our nondefault constructor
+	dog bella("Bella", false);
 
-	// TODO Print the dog's generic-animal data by calling its
+	// Print the dog's generic-animal data by calling its
 	// animal::print() function
+	bella.print();
 
-	// TODO Print the dog's dog-specific information by calling
+	// Print the dog's dog-specific information by calling
 	// its dog::print_fixed() function
+	bella.print_fixed();
 }

@@ -9,8 +9,7 @@ class animal {
 private:
 	string name = "Tad Cooper";
 public:
-	// TODO Nondefault animal constructor to specify
-	// the animal's name
+	animal(const string &name);
 
 	animal();
 	~animal();

@@ -7,7 +7,7 @@ using namespace std;
 
 class animal {
 protected:
-	string name = "Tad Cooper";
+	string name;
 public:
 	animal(const string &name);
 	animal();

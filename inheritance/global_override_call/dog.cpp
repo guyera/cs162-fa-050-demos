@@ -12,6 +12,7 @@ dog::~dog() {}
 
 // Overridden print() function
 void dog::print() const {
+	this->animal::print();
 	if (fixed) {
 		cout << "I'm fixed! Great job, owner!" << endl;
 	} else {

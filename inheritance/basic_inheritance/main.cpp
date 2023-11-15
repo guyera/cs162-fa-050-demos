@@ -5,5 +5,7 @@ int main() {
 	animal a;
 	a.print();
 
-	// TODO Create a dog and print its generic-animal data
+	// Create a dog and print its generic-animal data
+	dog d;
+	d.print();
 }

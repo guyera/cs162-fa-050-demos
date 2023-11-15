@@ -4,7 +4,10 @@
 
 using namespace std;
 
-// TODO Nondefault dog constructor.
+// Nondefault dog constructor.
+dog::dog(const string &name, bool fixed) : animal(name), fixed(fixed) {
+	cout << "Nondefault dog constructor" << endl;
+}
 
 dog::dog() {
 	cout << "Default dog constructor" << endl;
