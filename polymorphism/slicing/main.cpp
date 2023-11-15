@@ -13,21 +13,26 @@ void do_turn(int turn, monster* m, int n_monsters) {
 
 	// Perform each monster's turn
 	for (int i = 0; i < n_monsters; i++) {
-		// TODO Complete this loop
+		m[i].perform_action();
 	}
 }
 
 int main() {
-	// TODO Create an array of monsters
+	// Create our array of monsters
+	int n_m = 8; // 8 total monsters
+	monster *monsters = new monster[n_m];
 
 	// The first 5 monsters are zombies
 	for (int i = 0; i < 5; i++) {
-		// TODO Create a zombie and store it in the array
+		// Create a zombie and store it in our monster array
+		zombie z;
+		monsters[i] = z;
 	}
 
 	// The last 3 monsters are vampires
 	for (int i = 5; i < 8; i++) {
-		// TODO Create a vampire and store it in the array
+		vampire v;
+		monsters[i] = v;
 	}
 
 	// Do three turns
