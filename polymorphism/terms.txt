@@ -1,0 +1,9 @@
+Early binding: Look at a function call, and decide WHICH function it should execute. Early -> happens at COMPILE time based on STATIC types.
+Late binding: Binding function calls at RUNTIME based on DYNAMIC types =
+
+Static type: Declared type of the variable
+Dynamic type: "ACTUAL" type of the underlying data
+
+vtable: The place in memory within an object that stores the object's pointers to its overrides of its virtual functions
+
+abstract type: Any class with at LEAST ONE pure virtual function

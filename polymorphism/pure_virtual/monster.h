@@ -8,8 +8,8 @@ public:
 	monster();
 	monster(int hp);
 
-	// This should now be a pure virtual function TODO
-	virtual void perform_action();
+	// This should now be a pure virtual function
+	virtual void perform_action() = 0;
 
 	void take_damage(int damage);
 

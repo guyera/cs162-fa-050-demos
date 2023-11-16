@@ -10,8 +10,8 @@ public:
 	monster();
 	monster(int hp);
 
-	// TODO Make this function virtual to use it polymorphically
-	void perform_action();
+	// Make this function virtual to use it polymorphically
+	virtual void perform_action();
 
 	void take_damage(int damage);
 	
