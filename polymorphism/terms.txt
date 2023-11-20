@@ -1,9 +1,15 @@
-Early binding: Look at a function call, and decide WHICH function it should execute. Early -> happens at COMPILE time based on STATIC types.
-Late binding: Binding function calls at RUNTIME based on DYNAMIC types =
+Upcasting: Casting an object of a derived type to its base type (or any of its ancestor types)
 
-Static type: Declared type of the variable
-Dynamic type: "ACTUAL" type of the underlying data
+Object slicing: What happens when you upcast objects directly---the derived class's specific data gets "sliced off"
 
-vtable: The place in memory within an object that stores the object's pointers to its overrides of its virtual functions
+Polymorphism: A single variable being capable of representing one of multiple types of objects. In C++, this is done by upcasting pointers or references to avoid object slicing.
 
-abstract type: Any class with at LEAST ONE pure virtual function
+Binding: Looking at a function call, and deciding WHICH function to call
+
+Early binding: Binding that the compiler does
+/ Static dispatch
+
+Late binding: At runtime, based on the DYNAMIC TYPE of an object, decide which function should be called when we call a member function on it
+/ Dynamic dispatch
+
+Abstract class: Any class with one or more pure virtual functions. You cannot create instances of an abstract class
