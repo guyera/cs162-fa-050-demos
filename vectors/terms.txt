@@ -1,0 +1,5 @@
+Iterator: A wrapper around a pointer that points to an element within a vector
+
+Size: The number of elements that you have intentionally added to the vector
+
+Capacity: Is the "physical" size of the vector's internal dynamic array
